@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light only">
+<meta name="theme-color" content="#ffffff">
+<meta name="supported-color-schemes" content="light">
+<meta name="msapplication-navbutton-color" content="#ffffff">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="darkreader-lock">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Almendra&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&family=Playwrite+AU+SA:wght@100..400&family=Radley:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&family=Nova+Square&family=Playwrite+AU+SA:wght@100..400&family=Radley:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+  <style>
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: white !important;
+        color: black !important;
+      }
+    }
+  </style>
+  <style>
+    html {
+      visibility: hidden;
+    }
+  </style>
+  <style>
+
+:root {
+  color-scheme: light only; /* Force light mode */
+}
+
+:root, body, html {
+margin: 0;
+padding: 0;
+height: 100%;
+color: black;
+overflow: hidden;
+background-color: white !important;
+color: black !important;
+forced-color-adjust: none !important;
+background: white !important;
+text-decoration: none;
+font-family: 'Raleway', serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root, body, html {
+    background-color: white !important;
+    color: black !important;
+  }
+}
+
+.page {
+height: 100vh;
+display: flex;
+text-align: center;
+position: relative;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+
+#page1 {
+gap: 15px;
+display: flex;
+height: 100vh;
+margin-top: 300px;
+flex-direction: row;
+text-align: center;
+position: relative;
+align-items: center;
+margin-bottom: 550px;
+flex-wrap: wrap-reverse;
+justify-content: center;
+}
+
+.white {
+  position: fixed;
+  width: 100vw ;
+  height: 100vh;
+  z-index: 0;
+  fill-opacity: 100%;
+  z-index: 19;
+}
+.landinglogo {
+color: white;
+display: flex;
+font-weight: bold;
+z-index: 99;
+justify-content: center;
+animation: 
+    pulse 2s ease-in-out infinite, zoomInOut 2s infinite;
+}
+@keyframes pulse {
+  0% {opacity: 1;}
+  90% {opacity: 0;}
+  91% {opacity: 1;}
+  92% {opacity: 0;}
+  93% {opacity: 1;}
+  94% {opacity: 0;}
+  95% {opacity: 1;}
+  97% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes zoomInOut {
+0% {transform: scale(1);}
+75% {transform: scale(0.5);}
+100% {transform: scale(1);}
+}
+
+.clickable-txt {
+top: 93%;
+left: 50%;
+color: black;
+font-size: 1em;
+font-weight: 400;
+font-style: italic;
+position: absolute;
+transform: translate(-50%, -50%);
+z-index: 99;
+}
+
+#accessBtn {
+  top: 80%;
+  text-decoration: none;
+  color: black;
+  text-decoration: black;
+  z-index: 99;
+}
+
+
+#page2 {
+background: none;
+overflow-x: hidden;
+overflow-y: auto;
+position: relative;
+max-height: 100vh;
+}
+
+.page2 {
+height: auto;
+min-height: 100vh;
+display: flex;
+text-align: center;
+align-items: center;
+flex-direction: column;
+justify-content: flex-start;
+overflow-y: visible;
+padding-top: 15px;
+padding-bottom: 65px;
+font-family: 'Raleway', serif;
+font-weight: bolder;
+}
+
+.logo {
+top: 2%;
+left: 50%;
+width: 190px;
+height: auto;
+margin:10px 0;
+transform: translateX(-50%);
+position: absolute;
+perspective: 1000px;
+z-index: 99;
+}
+
+.logo img {
+z-index: 99;
+height: 70px;
+width: auto;
+animation: flipLogo 13s infinite ease-in-out;
+transform-style: preserve-3d;
+z-index: 99;
+}
+
+@keyframes flipLogo {
+0% {
+  transform: rotateY(0deg);
+}
+100% {
+  transform: rotateY(360deg);
+}
+}
+
+@keyframes flipLogo {
+0% {
+  transform: rotateY(0deg);
+}
+100% {
+  transform: rotateY(360deg);
+}
+}
+
+ .options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: white !important;
+  gap: 5px;
+  width: 398px;
+  max-width: 398px;
+  color: white;
+  margin: 263px 0;
+  padding: 45;
+  box-sizing: border-box;
+  justify-content: center;
+  justify-items: center;
+  z-index: 99;
+} 
+ .option {
+  position: absolute;
+  gap: 4px;
+  margin-top: 800px;
+  margin-left: -7%;
+  box-sizing: border-box;
+  z-index: 99;
+}
+
+.footer-text {
+  margin-top: auto;
+  padding: 45px;
+  padding-bottom: 111px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 11px;
+  color: black;
+  z-index: 99;
+}
+
+
+.special-font {
+  font-family: 'Almendra', serif;
+  font-size: 7px;
+  font-weight: bold;
+  color: #000;
+}
+
+.special-fontz {
+  font-family: "Nova Square", sans-serif;
+  font-size: 27px;
+  font-weight:lighter;
+  color: #000;
+}
+
+.cl {
+position: relative;
+margin-left: auto;
+right: 7%;
+display: block;
+text-align: center;
+text-decoration: none;
+color: #000000;
+left: 50%;
+overflow: hidden;
+border-radius: 7px;
+z-index: 99;
+background-color: white;
+background: rgb(255, 255, 255);
+transform: translate(-50%, -50%);
+}
+
+.cl img {
+width: 165px;
+height: auto;
+left: -2%;
+display: block;
+transition: transform 0.3s ease;
+position: relative;
+z-index: 99;
+padding: 10px;
+}
+
+
+.cl:hover img {
+transform: scale(1.1);
+}
+
+
+.product-info {
+      padding: 20px;
+      z-index: 99;
+      text-align: center;
+      font-weight: bolder;
+      font-size: 2rem;
+      font-family: "Radley", cursive;
+    }
+
+    .details {
+      font-weight: bold;
+      font-size: 13px;
+      margin-bottom: 3px;
+      color: #000000;
+      align-items: left;
+    }
+    
+    .product-info p {
+      margin: 3px 0;
+      font-size: 18px;
+      color: #000000;
+    }
+
+    .product-info h {
+      margin: 3px 0;
+      font-size: 12px;
+      color: #5f5f5f;
+    }
+
+    .product-info p del {
+      margin: 3px 0;
+      font-size: 10px;
+      color: #000000;
+    }
+
+    #details {
+      text-decoration: line-through;
+    }
+.single-item {
+  grid-column: 1 / -1;
+  width: auto;
+  height: 920px;
+  margin: 5px auto;
+  z-index: 99;
+}
+    
+.modal {
+display: none;
+position: fixed;
+z-index: 100;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: white;
+z-index: 99;
+}
+
+.modal-content {
+background-color: #ffffff;
+border: 1px solid #f5f5f5;
+color: black;
+width: 100%;
+height: 100%;
+border-radius: 20px;
+text-align: center;
+align-items: center;
+z-index: 99;
+}
+
+.close {
+color: #535353;
+float: right;
+font-size: 28px;
+font-weight: bold;
+cursor: pointer;
+z-index: 99;
+}
+
+.close:hover {
+color: black;
+z-index: 99;
+}
+
+#codeInput {
+width: 80%;
+padding: 10px;
+margin: 10px 0;
+text-align: center;
+font-size: 18px;
+z-index: 99;
+}
+
+#submitCode {
+background: black;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+z-index: 99;
+}
+
+#page1 iframe {
+  z-index: 99;
+}
+
+#page1 h1 {
+  z-index: 99;
+}
+
+#submitCode:hover {
+background: #333;
+}
+  </style>
+  <title>Dossé</title>
+</head>
+<body style="background-color: white !important;color: black !important;">
+
+<script>
+  // Wait for all images to fully load before showing the page
+  window.addEventListener('load', () => {
+    const imgs = document.images;
+    let count = 0;
+    const total = imgs.length;
+
+    if (total === 0) {
+      document.documentElement.style.visibility = 'visible';
+    }
+
+    for (let img of imgs) {
+      if (img.complete) {
+        count++;
+      } else {
+        img.addEventListener('load', checkImages);
+        img.addEventListener('error', checkImages);
+      }
+    }
+
+    function checkImages() {
+      count++;
+      if (count === total) {
+        document.documentElement.style.visibility = 'visible';
+      }
+    }
+
+    if (count === total) {
+      document.documentElement.style.visibility = 'visible';
+    }
+  });
+  // Force white background if CSS fails
+document.addEventListener('DOMContentLoaded', function() {
+  document.documentElement.style.backgroundColor = 'white';
+  document.body.style.backgroundColor = 'white';
+});
+</script>
+<!-- Page 0 -->
+<section id="page0" class="page">
+  <img class="white" src="white.jpeg">
+  <script>
+    setTimeout(function () {
+      window.location.href = "#page1";
+    }, 3000);
+  </script>
+  <h1 class="landinglogo"><img src="DosseMO.jpg" width="auto" height="130"></h1>
+</section>
+
+<!-- Page 1 -->
+<section id="page1" class="page">
+  <img class="white" src="white.jpeg">
+  <h1 class="logo"><img rel="preload" src="DosseMO.jpg" as="image" top="1%";> </h1>
+  <iframe width="auto" height="280"
+    src="https://www.youtube.com/embed/O8fVaMA59jI?si=EAwO_oREx9muk5f5&amp;controls=0&amp;start=1"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+  </iframe>
+  <div class="center-txt">
+    <a href="#" class="clickable-txt" id="accessBtn">Continue</a>
+  </div>
+
+  <!-- Code Entry -->
+  <div id="codeModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>One last step...</h2>
+      <input type="text" id="codeInput" maxlength="4" placeholder="Input Code">
+      <button id="submitCode">Submit</button>
+      <p><a href="https://wa.me/message/BL27QY22NKXMC1" id="accessBtn">Request</a></p>
+      <p id="errorMsg" style="color: red; display: none;">Incorrect code.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Page 2 -->
+<section id="page2" class="page2">
+  <img class="white" src="white.jpeg">
+  <h1 class="logo"><img rel="preload" src="DosseMO.jpg" as="image"></h1>
+  <div class="options">
+    <img class="white" src="white.jpeg">
+    <a href="https://wa.me/message/BL27QY22NKXMC1" class="cl">
+      <img src="DOSSE_1.jpg" alt="Hoodie">
+      <div class="product-info">
+        <div class="details">P MEMBER$ ONLY|25888</div>
+        <h>Winter Collection</h>
+        <p><del>R539.99</del>  R499.99</p>
+        <p>&nbsp;</p>
+      </div>
+    </a>
+
+    <a href="https://wa.me/message/BL27QY22NKXMC1" class="cl">
+      <img src="DOSSE_2.jpg" alt="Hoodie">
+      <div class="product-info">
+        <div class="details">P MEMBER$ ONLY|25888</div>
+        <h>Winter Collection</h>
+        <p><del>R539.99</del>  R499.99</p>
+        <p>&nbsp;</p>
+      </div>
+    </a>
+
+    <a href="https://wa.me/message/BL27QY22NKXMC1" class="cl">
+      <img src="DOSSE_3.jpg" alt="Hoodie">
+      <div class="product-info">
+        <div class="details">P MEMBER$ ONLY |25999</div>
+        <h>Winter Collection</h>
+        <p>R539.99</p>
+        <p>&nbsp;</p>
+      </div>
+    </a>
+
+    <a href="https://wa.me/message/BL27QY22NKXMC1" class="cl">
+      <img src="DOSSE_4.jpg" alt="Hoodie">
+      <div class="product-info">
+        <div class="details">P MEMBER$ & SAMZEN COLLAB|2500S</div>
+        <h>Winter Collection</h>
+        <p>R539.99</p>
+        <p>&nbsp;</p>
+      </div>
+    </a>
+  </div>
+
+<div class="option">
+  <a href="https://wa.me/message/BL27QY22NKXMC1">
+      <img src="ncc.jpg" height="415px" width="auto" alt="Special Item">
+    </a>
+   </div>
+
+  <div class="footer-text">
+    <p><span class="special-fontz">Pessimistic Dose</span></p>
+    <p class="special-font">© 2022. All rights reserved.</p>
+  </div>
+</section>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const accessBtn = document.getElementById('accessBtn');
+    const codeModal = document.getElementById('codeModal');
+    const closeBtn = document.querySelector('.close');
+    const submitBtn = document.getElementById('submitCode');
+    const codeInput = document.getElementById('codeInput');
+    const errorMsg = document.getElementById('errorMsg');
+
+    const correctCode = "WH25";
+
+    accessBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      codeModal.style.display = "block";
+    });
+
+    closeBtn.addEventListener('click', function () {
+      codeModal.style.display = "none";
+      errorMsg.style.display = "none";
+      codeInput.value = "";
+    });
+
+    submitBtn.addEventListener('click', function () {
+      if (codeInput.value === correctCode) {
+        window.location.href = "#page2";
+        codeModal.style.display = "none";
+        codeInput.value = "";
+      } else {
+        errorMsg.style.display = "block";
+      }
+    });
+
+    codeInput.addEventListener('keypress', function (e) {
+      if (e.key === 'Enter') {
+        if (codeInput.value === correctCode) {
+          window.location.href = "#page2";
+          codeModal.style.display = "none";
+          codeInput.value = "";
+        } else {
+          errorMsg.style.display = "block";
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html>
